@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    image: php:8.1-alpine
+    ports:
+      - "8000:80"
+    restart: always
+    tty: true
+    container_name: php-zura
+    volumes:
+      - ./:/var/www/html
