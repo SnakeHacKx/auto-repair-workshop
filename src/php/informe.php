@@ -8,7 +8,7 @@ $autos = array_map('str_getcsv', file('../../assets/autos.csv'));
 <head>
     <meta charset="UTF-8">
     <title>Informe de Mantenimientos</title>
-    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
     <div class="container">

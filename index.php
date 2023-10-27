@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Taller de Reparación de Autos</title>
-    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
     <div class="container">

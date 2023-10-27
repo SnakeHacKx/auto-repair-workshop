@@ -1,0 +1,39 @@
+{
+  "name": "auto-repair-workshop",
+  "version": "1.0.0",
+  "description": "Proyecto de Zura - Web Taller de Autos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SnakeHacKx/auto-repair-workshop.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "node",
+    "php",
+    "js",
+    "html"
+  ],
+  "author": "SnakeHacKx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SnakeHacKx/auto-repair-workshop/issues"
+  },
+  "homepage": "https://github.com/SnakeHacKx/auto-repair-workshop#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "postcss": "^8.4.31",
+    "sass": "^1.69.5"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ]
+}
