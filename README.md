@@ -28,22 +28,22 @@ npm install --global gulp-cli
 
 **De aquí en adelante todo comando debe ser ejecutado en la raíz del proyecto**
 
-4. Correr la imagen de Docker de PHP (Debemos estar en la raíz del proyecto)
+4. Correr la imagen de Docker de PHP (la cual contiene la app en si y no tienes que usar XAMPP)
 
 ```
 docker-compose up -d
 ```
 
-1. Instalar dependencias
+5. Instalar dependencias
 
 ```
 npm i
 ```
 
-1. Ejecutar el watch
+6. Ejecutar el watch
 
 ```
 gulp
 ```
 
-1. Ir a `localhost/index.php`
+1. Ir a [localhost/index.php](localhost/index.php)
