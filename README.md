@@ -1,5 +1,7 @@
 # Taller de Reparación de Autos
 
+Proyecto creado utilizando PHP, HTML, CSS, JavaScript y Sass. Trata de un sitio web para la administración del taller ficticio **AutoMasters**.
+
 <p align="center">
   <a target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" width="200" alt="PHP Logo" /></a>
   <a target="blank"><img src="https://www.formacarm.es/portal/formacarm2.0/assets/images/cursos/166.png" width="200" alt="HTML Logo" /></a>
@@ -46,4 +48,12 @@ npm i
 gulp
 ```
 
-1. Ir a [localhost/index.php](localhost/index.php)
+7. Ir a [localhost/index.php](localhost/index.php)
+
+### Notas
+
+El contenedor de Docker está configurado para que corra en el puerto 80 de manera local.
+Si no se usa Docker esto debe configurarse aparte y si el puerto cambia, el link también lo hace.
+
+**Ejemplo:**
+Si se configura el puerto 3000 con XAMPP, se tendrá que acceder por medio de: `localhost:3000/index.php`
