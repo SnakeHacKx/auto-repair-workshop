@@ -1,5 +1,5 @@
 <?php
-file_put_contents("../../assets/autos.csv", "");
+file_put_contents("../../data/autos.csv", "");
 header("Location: informe.php");
 exit();
 ?>

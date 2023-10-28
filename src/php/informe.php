@@ -1,6 +1,6 @@
 <?php
 // Leer datos del archivo CSV
-$autos = array_map('str_getcsv', file('../../assets/autos.csv'));
+$autos = array_map('str_getcsv', file('../../data/autos.csv'));
 ?>
 
 <!DOCTYPE html>

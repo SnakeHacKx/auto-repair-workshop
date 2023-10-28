@@ -1,4 +1,26 @@
+@use "../base/mixins";
+
 .header {
-  display: flex;
-  flex-direction: column;
+  padding: 5rem 0;
+  position: relative;
+
+  @include mixins.phone {
+    padding: 4rem;
+  }
+
+  @include mixins.tablet {
+    padding: 3rem;
+  }
+
+  @include mixins.desktop {
+    padding: 2rem;
+  }
+
+  .header-content {
+    margin-top: 5rem;
+  }
+
+  &::before {
+    content: "";
+  }
 }

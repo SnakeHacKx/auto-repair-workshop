@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+<?php // include 'src/pages/home.html'; ?>
+
+<!-- <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Taller de Reparación de Autos</title>
     <link rel="stylesheet" href="build/css/app.css">
 </head>
+
 <body>
     <div class="container">
         <h1>Bienvenido al Taller de Reparación de Autos</h1>
@@ -16,4 +20,5 @@
         </nav>
     </div>
 </body>
-</html>
+
+</html> -->

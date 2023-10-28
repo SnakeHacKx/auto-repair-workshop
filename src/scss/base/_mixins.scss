@@ -1,0 +1,28 @@
+@use "variables" as vars;
+
+@mixin color {
+  color: black;
+  font-size: 2rem;
+}
+
+@mixin bgColor($color) {
+  background-color: $color;
+}
+
+@mixin phone {
+  @media (min-width: vars.$phone) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: vars.$tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: vars.$desktop) {
+    @content;
+  }
+}

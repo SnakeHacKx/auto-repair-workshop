@@ -28,9 +28,11 @@ npm install --global gulp-cli
 
 ---
 
-**De aquí en adelante todo comando debe ser ejecutado en la raíz del proyecto**
+**De aquí en adelante todo comando debe ser ejecutado en la <u>raíz del proyecto</u>.**
 
-4. Correr la imagen de Docker de PHP (la cual contiene la app en si y no tienes que usar XAMPP)
+---
+
+1. Correr el contenedor de Docker que contiene la aplicación (no se tiene que usar XAMPP)
 
 ```
 docker-compose up -d
@@ -42,13 +44,17 @@ docker-compose up -d
 npm i
 ```
 
-6. Ejecutar el watch
-
+6. Ejecutar el watch  
+Esto permitirá que el código de Sass se compile a CSS de forma automática.
 ```
 gulp
 ```
+Una vez ya se tengan compiladas las imágenes y no se quiere repetir el proceso cada vez, o si simplemente no se quieren comprimir las imágenes, se usa el siguiente comando que sólo compila la hoja de estilos CSS.
+```
+gulp dev
+```
 
-7. Ir a [localhost/index.php](localhost/index.php)
+1. Ir a [http://localhost/index.php](http://localhost/index.php) en el navegador.
 
 ### Notas
 

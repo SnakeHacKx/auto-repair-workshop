@@ -1,0 +1,26 @@
+// .bg-image {
+//   // background-image: url('build/assets/images/mechanic-bg-4.webp');
+//   background-image: url('../../../build/assets/images/mechanic-bg-4.webp');
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   height: 100vh;
+// }
+
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+body {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    url("../../../build/assets/images/mechanic-bg-4.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
