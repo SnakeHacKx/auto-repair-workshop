@@ -352,7 +352,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 4rem;
 }
 
 h3 {
@@ -746,7 +746,7 @@ body.register {
 }
 
 .main-container .form-container {
-  width: 40%;
+  width: 60%;
   margin-left: 0;
   border-radius: 20px;
   padding: 3rem;
@@ -790,14 +790,11 @@ body.report {
   background-size: cover;
 }
 
-.main-container .table-container {
-  margin-right: 0;
-  border-radius: 20px;
-  padding: 3rem;
-  background-color: white;
-}
 .main-container .table-container .report-header {
-  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+.main-container .table-container .report-header h2 {
+  color: #eeeeee;
 }
 @media (min-width: 768px) {
   .main-container .table-container .report-header {
@@ -831,7 +828,54 @@ body.report {
   justify-content: center;
 }
 .report-header .report-header-buttons .delete-button {
-  background-color: #D24848;
+  background-color: #d24848;
   color: white;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 3rem;
+  box-shadow: 0 5px 10px black;
+  background-color: white;
+  text-align: left;
+  overflow: hidden;
+  border-radius: 10px;
+  color: #4f546c;
+}
+table thead {
+  box-shadow: 0 5px 10px rgb(180, 180, 180);
+}
+table th {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+table td {
+  padding: 1rem 2rem;
+}
+table td.plate {
+  font-weight: bold;
+}
+table tr:nth-child(even) {
+  background-color: #f4f6fb;
+}
+
+.status {
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  text-align: center;
+}
+.status-pending {
+  background-color: #fff0c2;
+  color: #a68b00;
+}
+.status-cancelled {
+  background-color: #ffcdd2;
+  color: #c62828;
+}
+.status-completed {
+  background-color: #c8e6c9;
+  color: #388e3c;
 }
 /*# sourceMappingURL=app.css.map */

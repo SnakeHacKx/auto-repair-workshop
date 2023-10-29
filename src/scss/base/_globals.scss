@@ -10,6 +10,9 @@ html {
 *::before,
 *after {
   box-sizing: inherit;
+  // box-sizing: border-box;
+  // margin: 0;
+  // padding: 0;
 }
 
 body {
@@ -45,7 +48,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 4rem;
 }
 
 h3 {

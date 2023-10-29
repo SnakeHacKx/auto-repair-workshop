@@ -1,6 +1,6 @@
 <?php
 // Leer datos del archivo CSV
-$autos = array_map('str_getcsv', file('../../data/autos.csv'));
+$cars = array_map('str_getcsv', file('../../data/autos.csv'));
 ?>
 
 <!DOCTYPE html>
@@ -60,36 +60,101 @@ $autos = array_map('str_getcsv', file('../../data/autos.csv'));
           </button>
         </div>
       </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Placa</th>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th>Color</th>
-            <th>Dueño</th>
-            <th>Tipo</th>
-            <th>Cubículo</th>
-            <th>Fecha</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <p class="plate">ACF21343</p>
-            </td>
-            <td>Mitsubishi</td>
-            <td>Lancer EVO 9</td>
-            <td>Verde</td>
-            <td>Omar Medina</td>
-            <td>Cambio de filtros de aceite y aire</td>
-            <td>Cubículo #1</td>
-            <td>23/08/2023</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Placa</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Color</th>
+          <th>Dueño</th>
+          <th>Tipo</th>
+          <th>Cubículo</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+      <?php
+      $statusMap = [
+        'completed' => 'Completado',
+        'pending' => 'Pendiente',
+        'cancelled' => 'Cancelado',
+      ];
+
+      $typeMap = [
+        '1' => 'Cambio de aceite del motor',
+        '2' => 'Inspección y reparación de frenos',
+        '3' => 'Cambio de filtros de aceite y aire',
+      ];
+
+      $cubicleMap = [
+        '1' => 'Cubículo #1',
+        '2' => 'Cubículo #2',
+        '3' => 'Cubículo #3',
+      ];
+
+      $colorMap = [
+        'white' => 'Blanco',
+        'black' => 'Negro',
+        'gray' => 'Gris',
+        'red' => 'Rojo',
+        'blue' => 'Azul',
+        'lightBlue' => 'Celeste',
+        'green' => 'Verde',
+        'orange' => 'Naranja',
+        'brown' => 'Marrón',
+        'yellow' => 'Amarillo',
+        'silver' => 'Plateado',
+        'purple' => 'Morado',
+        'pink' => 'Rosado',
+      ];
+
+
+      foreach ($cars as $car) {
+        echo '<tr>';
+        foreach ($car as $key => $data) {
+          if ($key === 0) { // Verifica si es la primera columna (placa)
+            echo '<td class="plate">' . $data . '</td>';
+          } elseif ($key === 3) {
+            $color = $colorMap[$data];
+            echo '<td>' . $color . '</td>';
+          } elseif ($key === 5) {
+            $type = $typeMap[$data];
+            echo '<td>' . $type . '</td>';
+          } elseif ($key === 6) {
+            $cubicle = $cubicleMap[$data];
+            echo '<td>' . $cubicle . '</td>';
+          } elseif ($key === 8) {
+            $status = $statusMap[$data];
+            echo '<td><p class="status status-' . $data . '">' . ucfirst($status) . '</p></td>';
+          } else {
+            echo '<td>' . $data . '</td>';
+          }
+        }
+        echo '</tr>';
+      }
+
+      // foreach ($autos as $auto) {
+      //   echo '<tr>';
+      //   foreach ($auto as $dato) {
+      //     if ($dato === 'pending') {
+      //       echo '<td><p class="status status-pending">' . $dato . '</p></td>';
+      //     } elseif ($dato === 'completed') {
+      //       echo '<td><p class="status status-completed">' . $dato . '</p></td>';
+      //     } elseif ($dato === 'cancelled') {
+      //       echo '<td><p class="status status-cancelled">' . $dato . '</p></td>';
+      //     } else {
+      //       echo '<td>' . $dato . '</td>';
+      //     }
+      //   }
+      //   echo '</tr>';
+      // }
+      ?>
+    </table>
   </main>
 
   <footer class="footer">
@@ -145,3 +210,22 @@ $autos = array_map('str_getcsv', file('../../data/autos.csv'));
 </body>
 
 </html>
+
+<!-- Quiero que me proporciones unos 20 registros de un csv parecido a este: Omar Medina,RIGKRNGJ,Mitsubishi,Lancer EVO
+9,green,2,2,2023-10-25,pending. Contexto: es una app web para registrar mantenimiento de autos. Esto para una base de
+datos de prueba y no quiero estar creando mas registros manualmente... Explicacion de los campos: Nombre: nombre de
+dueno del carro, Placa: Placa del auto valida en Panama, Marca: marca del auto, Modelo: modelo del auto, color: color
+del auto pueden ser [white
+black
+gray
+red
+blue
+lightBlue
+green
+orange
+brown
+yellow
+silver
+purple
+pink], Tipo: puede ser [1,2,3], Cubiculo: puede ser [1,2,3], fecha: fecha de realizacion del mantenimiento y por ultimo
+el estado, puede ser[pendingm cancelled, completed] -->

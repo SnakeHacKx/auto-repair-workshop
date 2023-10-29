@@ -32,7 +32,7 @@ npm install --global gulp-cli
 
 ---
 
-1. Correr el contenedor de Docker que contiene la aplicación (no se tiene que usar XAMPP)
+4. Correr el contenedor de Docker que contiene la aplicación (no se tiene que usar XAMPP)
 
 ```
 docker-compose up -d
@@ -57,7 +57,9 @@ Una vez ya se tengan compiladas las imágenes y no se quiere repetir el proceso 
 gulp dev
 ```
 
-1. Ir a [http://localhost/index.html](http://localhost/index.html) en el navegador.
+7. Ir a [http://localhost/index.html](http://localhost/index.html) en el navegador.
+
+8. **Si se quiere rellenar la base de datos:** copiar el contenido del archivo `data.template.csv` que se encuentra en la carpeta data en el `autos.csv`.
 
 ### Notas
 
