@@ -38,7 +38,58 @@ $autos = array_map('str_getcsv', file('../../data/autos.csv'));
   </header>
 
   <main class="container main-container">
+    <div class="table-container">
+      <div class="report-header">
+        <h2>Informe de Mantenimiento</h2>
+        <div class="report-header-buttons">
+          <button class="icon-button delete-button" onclick="confirmDelete()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" style="fill: white">
+              <path d="M296 64h-80a7.91 7.91 0 00-8 8v24h96V72a7.91 7.91 0 00-8-8z" fill="none" />
+              <path
+                d="M432 96h-96V72a40 40 0 00-40-40h-80a40 40 0 00-40 40v24H80a16 16 0 000 32h17l19 304.92c1.42 26.85 22 47.08 48 47.08h184c26.13 0 46.3-19.78 48-47l19-305h17a16 16 0 000-32zM192.57 416H192a16 16 0 01-16-15.43l-8-224a16 16 0 1132-1.14l8 224A16 16 0 01192.57 416zM272 400a16 16 0 01-32 0V176a16 16 0 0132 0zm32-304h-96V72a7.91 7.91 0 018-8h80a7.91 7.91 0 018 8zm32 304.57A16 16 0 01320 416h-.58A16 16 0 01304 399.43l8-224a16 16 0 1132 1.14z" />
+            </svg>
+            Eliminar Registros
+          </button>
+          <button class="icon-button" onclick="navigateTo('register.html')">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"
+              style="width: 16px; height: 16px; fill: black">
+              <path
+                d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z" />
+            </svg>
+            Registrar Auto
+          </button>
+        </div>
+      </div>
 
+      <table>
+        <thead>
+          <tr>
+            <th>Placa</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Color</th>
+            <th>Dueño</th>
+            <th>Tipo</th>
+            <th>Cubículo</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p class="plate">ACF21343</p>
+            </td>
+            <td>Mitsubishi</td>
+            <td>Lancer EVO 9</td>
+            <td>Verde</td>
+            <td>Omar Medina</td>
+            <td>Cambio de filtros de aceite y aire</td>
+            <td>Cubículo #1</td>
+            <td>23/08/2023</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </main>
 
   <footer class="footer">
@@ -90,6 +141,7 @@ $autos = array_map('str_getcsv', file('../../data/autos.csv'));
     </div>
   </footer>
   <script src="../js/navigation.js"></script>
+  <script src="../js/confirm-delete-db.js"></script>
 </body>
 
 </html>
