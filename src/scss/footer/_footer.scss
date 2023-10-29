@@ -18,6 +18,10 @@
 
   .copyright {
     text-align: left;
+    color: vars.$white;
+    a {
+      color: vars.$white;
+    }
     p {
       color: vars.$white;
       font-size: 1.3rem;
@@ -32,6 +36,10 @@
       color: vars.$white;
       font-size: 1.3rem;
       font-weight: 400;
+    }
+  
+    .separator {
+      color: #e8e8e8;
     }
   }
 }

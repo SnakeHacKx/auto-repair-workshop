@@ -185,7 +185,7 @@ $cars = array_map('str_getcsv', file('../../data/autos.csv'));
       </div>
 
       <div class="footer-box terms">
-        <a href="#">Términos de servicio</a> | <a href="#">Privacidad</a>
+        <a href="#">Términos de servicio</a> <span class="separator">|</span> <a href="#">Privacidad</a>
       </div>
     </div>
   </footer>
