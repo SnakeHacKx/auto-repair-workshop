@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -353,11 +352,11 @@ h1 {
 }
 
 h2 {
-  font-size: 3.6rem;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 3.2rem;
+  font-size: 2rem;
 }
 
 .primary-button {
@@ -403,13 +402,44 @@ h3 {
   font-size: 1.3rem;
   cursor: pointer;
 }
+.icon-button span {
+  display: flex;
+  align-items: center;
+}
 .icon-button:hover {
-  background-color: #A5C9CA; /* Color ligeramente más oscuro en hover */
+  background-color: #A5C9CA;
 }
 .icon-button svg {
-  width: 18px; /* Ajusta el tamaño del icono según sea necesario */
+  width: 18px;
   height: 18px;
-  margin-right: 4px; /* Espacio entre el icono y el texto */
+  margin-right: 4px;
+}
+
+.icon-button-no-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #191825;
+  border: none;
+  border-radius: 100px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.logo-mini {
+  position: relative;
+}
+.logo-mini h3 {
+  text-align: left;
+  color: #eeeeee;
+  text-transform: uppercase;
+}
+.logo-mini h3 .auto {
+  font-weight: 400;
+}
+.logo-mini h3 .masters {
+  font-weight: 700;
 }
 
 .text-center {
@@ -524,7 +554,7 @@ h3 {
   }
 }
 
-body {
+body.index {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%), url("../../../build/assets/images/mechanic-bg-4.jpeg");
   background-repeat: no-repeat;
   background-position: center;
@@ -643,7 +673,7 @@ body {
   color: #eeeeee;
 }
 .hero .primary-button:hover {
-  background-color: #2a2930; /* Color ligeramente más oscuro en hover */
+  background-color: #2a2930;
 }
 
 .logo {
@@ -665,4 +695,32 @@ body {
   .logo h1 {
     margin-top: 10rem;
   }
+}
+
+@media (min-width: 768px) {
+  .overlay-content .overlay-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .overlay-content .overlay-header > * {
+    flex: 0 0 calc(100% / 2 - 0);
+    margin: 0;
+  }
+}
+
+body.register {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%), url("../../../build/assets/images/mechanic-bg-1.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body.report {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%), url("../../../build/assets/images/home-bg-2.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }

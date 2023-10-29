@@ -1,6 +1,6 @@
 @use "../base/variables" as vars;
 
-body {
+body.index {
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.6) 0%,

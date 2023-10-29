@@ -1,0 +1,11 @@
+@use "../base/variables" as vars;
+@use "../base/mixins";
+
+.overlay-content {
+  .overlay-header {
+    @include mixins.tablet {
+      @include mixins.flex-grid(2, 0);
+    }
+
+  }
+}
