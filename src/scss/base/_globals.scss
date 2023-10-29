@@ -1,4 +1,5 @@
 @use "variables" as vars;
+@use "mixins";
 
 html {
   font-size: 62.5%;
@@ -14,11 +15,14 @@ html {
 body {
   font-family: vars.$main_font;
   font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 p {
   color: vars.$black;
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 .container {
@@ -36,11 +40,11 @@ img {
   display: block;
 }
 
-h1,
-h2,
-h3 {
-  margin: 0 0 vars.$separation 0;
-}
+// h1,
+// h2,
+// h3 {
+//   margin: 0 0 vars.$separation 0;
+// }
 
 h1 {
   font-size: 4rem;
@@ -52,4 +56,60 @@ h2 {
 
 h3 {
   font-size: 3.2rem;
+}
+
+.primary-button {
+  background-color: vars.$white;
+  border: none;
+  border-radius: 10px;
+  color: vars.$black;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.3rem;
+  cursor: pointer; 
+
+  &:hover {
+    background-color: vars.$secondary;
+  }
+}
+
+.secondary-button {
+  background-color: vars.$primary;
+  border: none;
+  border-radius: 10px;
+  color: vars.$white;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer; 
+
+  &:hover {
+    background-color: vars.$black; 
+  }
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: vars.$white;
+  color: vars.$black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.3rem;
+  cursor: pointer; 
+
+  &:hover {
+    background-color: vars.$secondary; /* Color ligeramente más oscuro en hover */
+  }
+
+  svg {
+    width: 18px; /* Ajusta el tamaño del icono según sea necesario */
+    height: 18px;
+    margin-right: 4px; /* Espacio entre el icono y el texto */
+  }
 }

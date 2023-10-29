@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -322,11 +323,14 @@ html {
 body {
   font-family: "DM Sans", sans-serif;
   font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 p {
   color: #191825;
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 .container {
@@ -344,12 +348,6 @@ img {
   display: block;
 }
 
-h1,
-h2,
-h3 {
-  margin: 0 0 5rem 0;
-}
-
 h1 {
   font-size: 4rem;
 }
@@ -362,12 +360,64 @@ h3 {
   font-size: 3.2rem;
 }
 
+.primary-button {
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 10px;
+  color: #191825;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.primary-button:hover {
+  background-color: #A5C9CA;
+}
+
+.secondary-button {
+  background-color: #395B64;
+  border: none;
+  border-radius: 10px;
+  color: #eeeeee;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.secondary-button:hover {
+  background-color: #191825;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  color: #191825;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.icon-button:hover {
+  background-color: #A5C9CA; /* Color ligeramente más oscuro en hover */
+}
+.icon-button svg {
+  width: 18px; /* Ajusta el tamaño del icono según sea necesario */
+  height: 18px;
+  margin-right: 4px; /* Espacio entre el icono y el texto */
+}
+
 .text-center {
   text-align: center;
 }
 
 .bg-primary {
-  background-color: #865dff;
+  background-color: #395B64;
 }
 
 .header {
@@ -396,10 +446,223 @@ h3 {
   content: "";
 }
 
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .main-nav {
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 0;
+  }
+}
+.main-nav a {
+  text-align: center;
+  color: #eeeeee;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .main-nav a {
+    margin-bottom: 0;
+  }
+}
+.main-nav a:hover {
+  color: #A5C9CA;
+}
+.main-nav a.active {
+  color: #A5C9CA;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer {
+  margin-top: auto;
+}
+.footer .footer-content {
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .footer .footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+.footer .copyright p {
+  color: #eeeeee;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.footer .terms p, .footer .terms a {
+  color: #eeeeee;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.social-media a img {
+  fill: #eeeeee;
+}
+@media (min-width: 768px) {
+  .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
 body {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%), url("../../../build/assets/images/mechanic-bg-4.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+}
+
+#overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+#overlay.hidden {
+  display: none;
+}
+#overlay .overlay-content {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  max-width: 400px;
+}
+#overlay .overlay-content .buttons-overlay {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+#overlay .overlay-content .buttons-overlay .icon-button {
+  background-color: #191825;
+  color: #eeeeee;
+}
+
+@-webkit-keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes bounceOut {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@keyframes bounceOut {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+#overlay {
+  -webkit-animation: bounceIn 0.5s;
+          animation: bounceIn 0.5s;
+}
+#overlay.hidden {
+  -webkit-animation: bounceOut 0.5s;
+          animation: bounceOut 0.5s;
+}
+
+.hero p {
+  color: #eeeeee;
+}
+.hero .hero-description {
+  width: 40%;
+  text-align: left;
+}
+.hero .primary-button {
+  background-color: #191825;
+  color: #eeeeee;
+}
+.hero .primary-button:hover {
+  background-color: #2a2930; /* Color ligeramente más oscuro en hover */
+}
+
+.logo {
+  position: relative;
+}
+.logo h1 {
+  text-align: left;
+  color: #eeeeee;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+.logo h1 .auto {
+  font-weight: 400;
+}
+.logo h1 .masters {
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .logo h1 {
+    margin-top: 10rem;
+  }
 }

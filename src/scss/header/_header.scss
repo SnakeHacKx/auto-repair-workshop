@@ -4,6 +4,10 @@
   padding: 5rem 0;
   position: relative;
 
+  // @include mixins.tablet {
+  //   min-height: 20rem;
+  // }
+
   @include mixins.phone {
     padding: 4rem;
   }

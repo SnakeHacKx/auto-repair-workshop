@@ -1,0 +1,43 @@
+@use "../base/mixins";
+@use "../base/variables" as vars;
+
+.footer {
+  margin-top: auto;
+  .footer-content {
+    padding: 1rem;
+
+    @include mixins.tablet {
+      @include mixins.grid(3, 2rem);
+    }
+  }
+
+  .copyright {
+    p {
+      color: vars.$white;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  .terms {
+    p, a {
+      color: vars.$white;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.social-media {
+  a {
+    img {
+      fill: vars.$white;
+    }
+  }
+
+  @include mixins.tablet {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}

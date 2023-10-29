@@ -1,0 +1,43 @@
+@use "../base/variables" as vars;
+@use "../base/mixins";
+
+.hero {
+  p {
+    color: vars.$white;
+  }
+
+  .hero-description {
+    width: 40%;
+    text-align: left;
+  }
+
+  .primary-button {
+    background-color: vars.$black;
+    color: vars.$white;
+    &:hover {
+      background-color: vars.$darkGrey; /* Color ligeramente más oscuro en hover */
+    }
+  }
+}
+
+.logo {
+  position: relative;
+
+  h1 {
+    text-align: left;
+    color: vars.$white;
+    text-transform: uppercase;
+    margin-top: 5rem;
+
+    .auto {
+      font-weight: 400;
+    }
+    .masters {
+      font-weight: 700;
+    }
+
+    @include mixins.tablet {
+      margin-top: 10rem;
+    }
+  }
+}
