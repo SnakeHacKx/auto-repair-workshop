@@ -32,7 +32,8 @@
       font-weight: bold;
     }
 
-    input:not([type="submit"]), select {
+    input:not([type="submit"]),
+    select {
       width: 100%;
       padding: 1rem;
       border: none;

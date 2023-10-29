@@ -16,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     file_put_contents("../../data/autos.csv", $csvData, FILE_APPEND);
 
     // Redirigir de nuevo al formulario después de registrar
-    // header("Location: ../../index.html");
     header("Location: ../pages/register.html");
     exit();
 }

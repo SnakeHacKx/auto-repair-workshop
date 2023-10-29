@@ -73,8 +73,7 @@ table {
   color: #4f546c;
 
   thead {
-    // background-color: rgb(240, 240, 240);
-    box-shadow: 0 5px 10px rgb(180, 180, 180);
+    box-shadow: 0 5px 10px #b4b4b4;
   }
 
   th {
@@ -92,7 +91,6 @@ table {
       font-weight: bold;
     }
   }
-
 
   tr:nth-child(even) {
     background-color: #f4f6fb;
@@ -117,4 +115,3 @@ table {
     color: $completed-font;
   }
 }
-

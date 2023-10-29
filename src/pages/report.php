@@ -137,22 +137,6 @@ $cars = array_map('str_getcsv', file('../../data/autos.csv'));
         }
         echo '</tr>';
       }
-
-      // foreach ($autos as $auto) {
-      //   echo '<tr>';
-      //   foreach ($auto as $dato) {
-      //     if ($dato === 'pending') {
-      //       echo '<td><p class="status status-pending">' . $dato . '</p></td>';
-      //     } elseif ($dato === 'completed') {
-      //       echo '<td><p class="status status-completed">' . $dato . '</p></td>';
-      //     } elseif ($dato === 'cancelled') {
-      //       echo '<td><p class="status status-cancelled">' . $dato . '</p></td>';
-      //     } else {
-      //       echo '<td>' . $dato . '</td>';
-      //     }
-      //   }
-      //   echo '</tr>';
-      // }
       ?>
     </table>
   </main>
@@ -210,22 +194,3 @@ $cars = array_map('str_getcsv', file('../../data/autos.csv'));
 </body>
 
 </html>
-
-<!-- Quiero que me proporciones unos 20 registros de un csv parecido a este: Omar Medina,RIGKRNGJ,Mitsubishi,Lancer EVO
-9,green,2,2,2023-10-25,pending. Contexto: es una app web para registrar mantenimiento de autos. Esto para una base de
-datos de prueba y no quiero estar creando mas registros manualmente... Explicacion de los campos: Nombre: nombre de
-dueno del carro, Placa: Placa del auto valida en Panama, Marca: marca del auto, Modelo: modelo del auto, color: color
-del auto pueden ser [white
-black
-gray
-red
-blue
-lightBlue
-green
-orange
-brown
-yellow
-silver
-purple
-pink], Tipo: puede ser [1,2,3], Cubiculo: puede ser [1,2,3], fecha: fecha de realizacion del mantenimiento y por ultimo
-el estado, puede ser[pendingm cancelled, completed] -->

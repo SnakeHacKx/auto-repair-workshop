@@ -4,10 +4,6 @@
   padding: 5rem 0;
   position: relative;
 
-  // @include mixins.tablet {
-  //   justify-content: center;
-  // }
-
   @include mixins.phone {
     padding: 4rem;
   }

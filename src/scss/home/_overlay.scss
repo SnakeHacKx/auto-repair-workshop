@@ -6,6 +6,5 @@
     @include mixins.tablet {
       @include mixins.flex-grid(2, 0);
     }
-
   }
 }

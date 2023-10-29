@@ -10,9 +10,6 @@ html {
 *::before,
 *after {
   box-sizing: inherit;
-  // box-sizing: border-box;
-  // margin: 0;
-  // padding: 0;
 }
 
 body {
@@ -64,7 +61,7 @@ h3 {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, color 0.3s;
   font-size: 1.4rem;
-  cursor: pointer; 
+  cursor: pointer;
 
   &:hover {
     background-color: vars.$secondary;
@@ -80,10 +77,10 @@ h3 {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, color 0.3s;
   font-size: 1.4rem;
-  cursor: pointer; 
+  cursor: pointer;
 
   &:hover {
-    background-color: vars.$black; 
+    background-color: vars.$black;
   }
 }
 
@@ -99,7 +96,7 @@ h3 {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, color 0.3s;
   font-size: 1.4rem;
-  cursor: pointer; 
+  cursor: pointer;
 
   span {
     display: flex;
@@ -117,7 +114,6 @@ h3 {
   }
 }
 
-
 .icon-button-no-text {
   display: flex;
   align-items: center;
@@ -127,9 +123,8 @@ h3 {
   border: none;
   border-radius: 100px;
   padding: 0;
-  cursor: pointer; 
+  cursor: pointer;
 }
-
 
 .logo-mini {
   position: relative;
@@ -146,9 +141,5 @@ h3 {
     .masters {
       font-weight: 700;
     }
-
-    // @include mixins.tablet {
-    //   margin-top: 10rem;
-    // }
   }
 }
