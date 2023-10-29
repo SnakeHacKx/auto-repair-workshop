@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,7 +35,92 @@
     </header>
 
     <main class="container main-container">
-      
+      <div class="container form-container">
+        <div class="form-header">
+          <h2>Mantenimiento</h2>
+          <button 
+            class="icon-button"
+            onclick="navigateTo('report.php')"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+              <path
+                d="M428 224H288a48 48 0 01-48-48V36a4 4 0 00-4-4h-92a64 64 0 00-64 64v320a64 64 0 0064 64h224a64 64 0 0064-64V228a4 4 0 00-4-4z" />
+              <path
+                d="M419.22 188.59L275.41 44.78a2 2 0 00-3.41 1.41V176a16 16 0 0016 16h129.81a2 2 0 001.41-3.41z" />
+            </svg>
+            Ver Informe
+          </button>
+        </div>
+        <form action="/src/tasks/register.php" method="post">
+          <div class="field">
+            <!-- <label for="name">Nombre</label>  -->
+            <input type="text" id="owner" name="owner" placeholder="Propietario" required>
+          </div>
+          <div class="form-section-title">
+            <p>Auto</p>
+          </div>
+          <div class="field">
+            <!-- <label for="name">Placa</label>  -->
+            <input type="text" id="plate" name="plate" placeholder="Placa" required>
+          </div>
+          <div class="field">
+            <!-- <label for="name">Marca</label>  -->
+            <input type="text" id="brand" name="brand" placeholder="Marca" required>
+          </div>
+          <div class="field">
+            <!-- <label for="name">Modelo</label>  -->
+            <input type="text" id="model" name="model" placeholder="Modelo" required>
+          </div>
+          <div class="field">
+            <!-- <label for="name">Color</label>  -->
+            <select id="color" name="color" required>
+              <option value="" disabled selected>Color</option>
+              <option value="white">Blanco</option>
+              <option value="black">Negro</option>
+              <option value="gray">Gris</option>
+              <option value="red">Rojo</option>
+              <option value="blue">Azul</option>
+              <option value="lightBlue">Celeste</option>
+              <option value="green">Verde</option>
+              <option value="orange">Naranja</option>
+              <option value="brown">Marrón</option>
+              <option value="yellow">Amarillo</option>
+              <option value="silver">Plateado</option>
+              <option value="purple">Morado</option>
+              <option value="pink">Rosado</option>
+            </select>
+          </div>
+          <div class="form-section-title">
+            <p>Mantenimiento</p>
+          </div>
+          <div class="field">
+            <!-- <label for="name">Color</label>  -->
+            <select id="type" name="type" required>
+              <option value="" disabled selected>Tipo</option>
+              <option value="1">Cambio de aceite del motor</option>
+              <option value="2">Inspección y reparación de frenos</option>
+              <option value="3">Cambio de filtros de aceite y aire</option>
+            </select>
+          </div>
+          <div class="field">
+            <!-- <label for="name">Color</label>  -->
+            <select id="cubicle" name="cubicle" required>
+              <option value="" disabled selected>Cubículo</option>
+              <option value="1">Cubículo #1</option>
+              <option value="2">Cubículo #2</option>
+              <option value="3">Cubículo #3</option>
+            </select>
+          </div>
+          <div class="field">
+            <!-- <label for="name">Modelo</label>  -->
+            <input type="date" name="date" id="date" placeholder="Fecha" required>
+          </div>
+          <div class="field">
+            <!-- <label for="name">Modelo</label>  -->
+            <input type="submit" value="Registrar Auto">
+          </div>
+        </form>
+      </div>
     </main>
 
     <footer class="footer">
@@ -107,6 +193,6 @@
       </div>
     </footer>
     <script src="src/js/overlay.js"></script>
-    <script src="src/js/navigation.js"></script>
+    <script src="../js/navigation.js"></script>
   </body>
 </html>

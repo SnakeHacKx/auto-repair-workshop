@@ -22,7 +22,7 @@ body {
 
 p {
   color: vars.$black;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .container {
@@ -41,7 +41,7 @@ img {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 h2 {
@@ -60,7 +60,7 @@ h3 {
   padding: 10px 20px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, color 0.3s;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   cursor: pointer; 
 
   &:hover {
@@ -76,6 +76,7 @@ h3 {
   padding: 10px 20px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, color 0.3s;
+  font-size: 1.4rem;
   cursor: pointer; 
 
   &:hover {
@@ -94,7 +95,7 @@ h3 {
   padding: 10px 20px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, color 0.3s;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   cursor: pointer; 
 
   span {

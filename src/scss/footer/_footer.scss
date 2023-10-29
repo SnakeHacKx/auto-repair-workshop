@@ -3,6 +3,11 @@
 
 .footer {
   margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+
   .footer-content {
     padding: 1rem;
 
@@ -12,17 +17,20 @@
   }
 
   .copyright {
+    text-align: left;
     p {
       color: vars.$white;
-      font-size: 1rem;
+      font-size: 1.3rem;
       font-weight: 400;
     }
   }
 
   .terms {
-    p, a {
+    text-align: right;
+    p,
+    a {
       color: vars.$white;
-      font-size: 1rem;
+      font-size: 1.3rem;
       font-weight: 400;
     }
   }

@@ -4,6 +4,7 @@ const { src, dest, watch, series } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const sourcemaps = require("gulp-sourcemaps");
 
 // IMAGENES
 const imagemin = require("gulp-imagemin");
@@ -13,8 +14,10 @@ const avif = require("gulp-avif");
 // Compila el código de SASS y lo convierte a CSS
 function css(done) {
   src("src/scss/app.scss")
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(postcss([autoprefixer()]))
+    .pipe(sourcemaps.write("."))
     .pipe(dest("build/css"));
   done();
 }

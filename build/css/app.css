@@ -329,7 +329,7 @@ body {
 
 p {
   color: #191825;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .container {
@@ -348,7 +348,7 @@ img {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 h2 {
@@ -367,7 +367,7 @@ h3 {
   padding: 10px 20px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, color 0.3s;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 .primary-button:hover {
@@ -382,6 +382,7 @@ h3 {
   padding: 10px 20px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, color 0.3s;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 .secondary-button:hover {
@@ -399,7 +400,7 @@ h3 {
   padding: 10px 20px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, color 0.3s;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 .icon-button span {
@@ -492,6 +493,7 @@ h3 {
   text-align: center;
   color: #eeeeee;
   text-transform: uppercase;
+  font-size: 1.8rem;
   font-weight: 400;
   margin-bottom: 1rem;
 }
@@ -521,6 +523,10 @@ h3 {
 
 .footer {
   margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }
 .footer .footer-content {
   padding: 1rem;
@@ -532,14 +538,21 @@ h3 {
     gap: 2rem;
   }
 }
+.footer .copyright {
+  text-align: left;
+}
 .footer .copyright p {
   color: #eeeeee;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 400;
 }
-.footer .terms p, .footer .terms a {
+.footer .terms {
+  text-align: right;
+}
+.footer .terms p,
+.footer .terms a {
   color: #eeeeee;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 400;
 }
 
@@ -665,7 +678,7 @@ body.index {
   color: #eeeeee;
 }
 .hero .hero-description {
-  width: 40%;
+  width: 45%;
   text-align: left;
 }
 .hero .primary-button {
@@ -717,6 +730,58 @@ body.register {
   background-size: cover;
 }
 
+.main-container .form-container .form-header {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .main-container .form-container .form-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .main-container .form-container .form-header > * {
+    flex: 0 0 calc(100% / 2 - 0);
+    margin: 0;
+  }
+}
+
+.main-container .form-container {
+  width: 40%;
+  margin-left: 0;
+  border-radius: 20px;
+  padding: 3rem;
+  background-color: white;
+}
+.main-container .form-container .field {
+  margin-bottom: 1.5rem;
+}
+.main-container .form-container .field:last-of-type {
+  margin-bottom: 0;
+}
+.main-container .form-container .form-section-title {
+  font-weight: bold;
+}
+.main-container .form-container input:not([type=submit]), .main-container .form-container select {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+.main-container .form-container input[type=submit] {
+  background-color: #191825;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  color: #eeeeee;
+  text-transform: uppercase;
+  border-radius: 20px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.main-container .form-container input[type=submit]:hover {
+  cursor: pointer;
+}
+
 body.report {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%), url("../../../build/assets/images/home-bg-2.jpeg");
   background-repeat: no-repeat;
@@ -724,3 +789,4 @@ body.report {
   background-attachment: fixed;
   background-size: cover;
 }
+/*# sourceMappingURL=app.css.map */

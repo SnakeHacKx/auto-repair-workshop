@@ -45,16 +45,19 @@ npm i
 ```
 
 6. Ejecutar el watch  
-Esto permitirá que el código de Sass se compile a CSS de forma automática.
+   Esto permitirá que el código de Sass se compile a CSS de forma automática.
+
 ```
 gulp
 ```
-Una vez ya se tengan compiladas las imágenes y no se quiere repetir el proceso cada vez, o si simplemente no se quieren comprimir las imágenes, se usa el siguiente comando que sólo compila la hoja de estilos CSS.
+
+Una vez ya se tengan compiladas las imágenes y no se quiere repetir el proceso cada vez, o si simplemente no se quieren comprimir las imágenes, se usa el siguiente comando que sólo compila la hoja de estilos CSS (es más rápido).
+
 ```
 gulp dev
 ```
 
-1. Ir a [http://localhost/index.php](http://localhost/index.php) en el navegador.
+1. Ir a [http://localhost/index.html](http://localhost/index.html) en el navegador.
 
 ### Notas
 
@@ -62,4 +65,4 @@ El contenedor de Docker está configurado para que corra en el puerto 80 de mane
 Si no se usa Docker esto debe configurarse aparte y si el puerto cambia, el link también lo hace.
 
 **Ejemplo:**
-Si se configura el puerto 3000 con XAMPP, se tendrá que acceder por medio de: `localhost:3000/index.php`
+Si se configura el puerto 3000 con XAMPP, se tendrá que acceder por medio de: `localhost:3000/index.html`
