@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // Guardar datos en archivo CSV
-    $csvData = "$owner,$plate,$brand,$model,$color,$type,$cubicle,$date,$status\n";
+    $csvData = "$plate,$brand,$model,$color,$owner,$type,$cubicle,$date,$status\n";
     file_put_contents("../../data/autos.csv", $csvData, FILE_APPEND);
 
     // Redirigir de nuevo al formulario después de registrar
