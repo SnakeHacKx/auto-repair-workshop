@@ -15,7 +15,7 @@ $cars = array_map('str_getcsv', file('../../data/autos.csv'));
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,400;9..40,600;9..40,900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="/build/css/app.css" />
+  <link rel="stylesheet" href="/src/css/app.css" />
 </head>
 
 <body class="report">
