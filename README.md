@@ -20,10 +20,14 @@ git clone https://github.com/SnakeHacKx/auto-repair-workshop.git
 ```
 
 2. Instalar [NodeJS](https://nodejs.org/en)
-3. Instalar Gulp.js
+3. Instalar Gulp.js (abra como administrador la Power Shell)
 
 ```
 npm install --global gulp-cli
+```
+**(Windows)** Si le aparece algún error relacionado a firma digital, puede ejecutar el siguiente comando
+```
+Set-ExecutionPolicy RemoteSigned
 ```
 
 ---
